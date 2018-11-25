@@ -1,5 +1,6 @@
 export const BASKET_LOADING = 'BASKET_LOADING';
 export const BASKET_LOADED = 'BASKET_LOADED';
+export const BASKET_ADD_ITEM = "BASKET_ADD_ITEM";
 
 export function loadBasket() {
     return async (dispatch, _, config) => {
@@ -13,4 +14,11 @@ export function loadBasket() {
             ...basket,
         })
     };
+}
+export function addToBasket(product, itemAdded) {
+
+  return {
+    type: BASKET_ADD_ITEM,
+    item: product
+  };
 }
