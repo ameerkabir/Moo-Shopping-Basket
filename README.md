@@ -1,4 +1,4 @@
-# Frontend Coding test
+# Frontend
 Shopping cart component that allows a user to manage their basket
 
 ## Getting started
