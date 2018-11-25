@@ -1,20 +1,25 @@
-import {
-	BASKET_LOADED,
-} from '../actions/basket';
+import { BASKET_LOADED,  BASKET_ADD_ITEM,
+ } from "../actions/basket";
 
-function basketReducer(state={ items: {} }, action) {
+const initialState = { items: {}, itemAdded: [] };
 
-    switch(action.type) {
-        case BASKET_LOADED:
-            return {
-                ...state, 
-                id: action.cartId,
-                items: action.cartItems,
-			}
-        default:
-            return state;
-    }
-
+function basketReducer(state = initialState, action) {
+  switch (action.type) {
+    case BASKET_LOADED:
+      return {
+        ...state,
+        id: action.cartId,
+        items: action.cartItems
+      };
+    case BASKET_ADD_ITEM:
+      // console.log({state})
+      return {
+        ...state,
+        itemAdded: [...state.itemAdded, action.item]
+      };
+    default:
+      return state;
+  }
 }
 
 export default basketReducer;

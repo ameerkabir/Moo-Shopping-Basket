@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductList = ({ products, addToBasket }) => (
+const ProductList = ({ products, addToBasket ,itemAdded}) => (
     <div className="mr-4">
         <h2>Products</h2>
         <ul className="list-group">
@@ -9,7 +9,7 @@ const ProductList = ({ products, addToBasket }) => (
                     return (
                         <li className="list-group-item d-flex justify-content-between" key={product.name}>
                             <span>{product.name}</span>
-                            <button className="btn btn-outline-primary btn-sm" type="button" onClick={() => addToBasket(product.id)}>Add</button>
+                            <button className="btn btn-outline-primary btn-sm" type="button" onClick={() => addToBasket(product,itemAdded)}>Add</button>
                         </li>
                     )
                 }) 
