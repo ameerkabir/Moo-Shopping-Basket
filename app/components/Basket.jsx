@@ -10,6 +10,9 @@ class Basket extends React.Component {
     return (
       <div className="mr-4">
         <h2>Your Basket</h2>
+         <span>
+          Total Item..{basket.itemAdded.length > 0 && basket.itemAdded.length}
+        </span>
         {basket.itemAdded.map((item, i) => (
           <ul key={i} className="list-group">
             <li className="list-group-item d-flex justify-content-between">
