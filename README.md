@@ -5,7 +5,7 @@ A user can start shopping by clicking the add button on the product.
 
 Once a product is added to a basket, the user can increase or decrease the quantity of an item by using the drop down menu.
 
-If the user is no longer interested in buying an item in their basket they can remove that particular item by clicking the button(X).
+If the user is no longer interested in buying an item in their basket, they can remove that particular item by clicking the button(X).
 
 ## Getting started
 
