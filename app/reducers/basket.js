@@ -1,7 +1,8 @@
 import {
   BASKET_LOADED,
   BASKET_ADD_ITEM,
-  INCREASE_QUANTITY
+  INCREASE_QUANTITY,
+  DELETE_ITEM
 } from "../actions/basket";
 
 const initialState = { items: {}, itemAdded: [] };
@@ -24,6 +25,11 @@ function basketReducer(state = initialState, action) {
       return {
         ...state,
         itemAdded: action.updatedItems
+      };
+    case DELETE_ITEM:
+      return {
+        ...state,
+        itemAdded: action.removeItem
       };
     default:
       return state;

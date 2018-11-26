@@ -17,7 +17,8 @@ export class BasketPage extends Component {
       products,
       basket,
       addToBasket,
-      increaseQuantity
+      increaseQuantity,
+      deleteItem
     } = this.props;
 
     if (isLoading) {
@@ -38,7 +39,7 @@ export class BasketPage extends Component {
             />
           </section>
           <section className="col">
-            <Basket basket={basket} increaseQuantity={increaseQuantity} />
+            <Basket basket={basket} increaseQuantity={increaseQuantity} deleteItem={deleteItem}/>
           </section>
         </main>
       </div>

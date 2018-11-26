@@ -6,7 +6,7 @@ class Basket extends React.Component {
   }
 
   render() {
-    const { basket, increaseQuantity } = this.props;
+    const { basket, increaseQuantity, deleteItem } = this.props;
     return (
       <div className="mr-4">
         <h2>Your Basket</h2>
@@ -29,6 +29,13 @@ class Basket extends React.Component {
                 <option value={7}>7</option>
                 <option value={8}>8</option>
               </select>
+              <button
+                onClick={() => deleteItem(item.id, basket.itemAdded)}
+                className="btn btn-outline-primary btn-sm"
+                type="button"
+              >
+                X
+              </button>
             </li>
           </ul>
         ))}

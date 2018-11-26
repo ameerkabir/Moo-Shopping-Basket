@@ -2,6 +2,7 @@ export const BASKET_LOADING = "BASKET_LOADING";
 export const BASKET_LOADED = "BASKET_LOADED";
 export const BASKET_ADD_ITEM = "BASKET_ADD_ITEM";
 export const INCREASE_QUANTITY = "INCREASE_QUANTITY";
+export const DELETE_ITEM = "DELETE_ITEM";
 
 export function loadBasket() {
   return async (dispatch, _, config) => {
@@ -50,5 +51,13 @@ export function increaseQuantity(id, items, value) {
   return {
     type: INCREASE_QUANTITY,
     updatedItems
+  };
+}
+
+export function deleteItem(id, itemAdded) {
+  const removeItem = itemAdded.filter(item => item.id !== id);
+  return {
+    type: DELETE_ITEM,
+    removeItem
   };
 }
