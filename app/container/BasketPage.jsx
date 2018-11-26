@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { ProductList,Basket } from "../components";
+import { ProductList, Basket } from "../components";
 
 import * as basketActions from "../actions/basket";
 
@@ -12,7 +12,13 @@ export class BasketPage extends Component {
   }
 
   render() {
-    const { isLoading, products, basket, addToBasket } = this.props;
+    const {
+      isLoading,
+      products,
+      basket,
+      addToBasket,
+      increaseQuantity
+    } = this.props;
 
     if (isLoading) {
       return <div> Loading your basket </div>;
@@ -32,7 +38,7 @@ export class BasketPage extends Component {
             />
           </section>
           <section className="col">
-            <Basket basket={basket} />
+            <Basket basket={basket} increaseQuantity={increaseQuantity} />
           </section>
         </main>
       </div>
