@@ -16,7 +16,6 @@ function basketReducer(state = initialState, action) {
         items: action.cartItems
       };
     case BASKET_ADD_ITEM:
-      // console.log({state})
       return {
         ...state,
         itemAdded: [...state.itemAdded, action.item]
